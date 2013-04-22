@@ -271,6 +271,19 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 	}
 	
+	public void testIntervaloNoValido(){
+		
+		
+	}
+	
+	public void testInetrvalosIguales(){
+		
+	}
+	
+	public void testCruceDeFechas(){
+		
+	}
+	
 	private Festivo produceFestivo(int year, int month, int date, boolean laborable) {
 		Festivo festivo = new Festivo();
 		Calendar fecha = Calendar.getInstance();
