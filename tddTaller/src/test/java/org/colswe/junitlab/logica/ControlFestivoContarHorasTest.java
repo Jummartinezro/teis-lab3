@@ -273,6 +273,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 	}
 	
 	public void testIntervaloNoValido(){
+		
 		ControlFestivo cf = new ControlFestivo();
 		
 		Calendar fecha1= Calendar.getInstance();
@@ -304,7 +305,8 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		fecha4.set(Calendar.DATE, 23);
 		Date date4 = fecha4.getTime();
 		
-		//prueba un intervalo valido y el otro invalido
+		//Prueba un intervalo válido y el otro inválido.
+		
 		ArrayList<Intervalo> intTest1= new ArrayList<Intervalo>();
 		
 		Intervalo valido1 = new Intervalo(date1, date2);
@@ -315,7 +317,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 		assertEquals(null,cf.contarHoras(intTest1));
 		
-		//prueba un intervalo valido y el otro invalido, en distinto orden
+		//Prueba un intervalo válido y el otro inválido, en distinto orden.
 		
 		ArrayList<Intervalo> intTest2= new ArrayList<Intervalo>();
 		
@@ -327,8 +329,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 		assertEquals(null,cf.contarHoras(intTest1));
 		
-		
-		//prueba ambos intervalos invalidos
+		//Prueba ambos intervalos inválidos.
 		
 		ArrayList<Intervalo> intTest3= new ArrayList<Intervalo>();
 		
@@ -405,21 +406,166 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 		Intervalo intervalo1 = new Intervalo(fecha1, fecha2);
 		Intervalo intervalo2 = intervalo1;
+		
 		ArrayList<Intervalo> listIntervalos1 = new ArrayList<Intervalo>();
 		listIntervalos1.add(intervalo1);
 		listIntervalos1.add(intervalo2);
+		
 		assertEquals(new Integer(136), cf.contarHoras(listIntervalos1));
 		
 		Intervalo intervalo3 = new Intervalo(fecha2, fecha3);
 		Intervalo intervalo4 = intervalo3;
+		
 		ArrayList<Intervalo> listIntervalos2 = new ArrayList<Intervalo>();
 		listIntervalos2.add(intervalo3);
 		listIntervalos2.add(intervalo4);
+		
 		assertEquals(new Integer(120), cf.contarHoras(listIntervalos2));
 
 	}
 	
 	public void testCruceDeFechas(){
+
+		List<Festivo> festivos = new ArrayList<Festivo>();
+		
+		//Festivos No Laborables
+		Festivo festivoNoLab1 = produceFestivo(2013, Calendar.MAY, 1, false);
+		Festivo festivoNoLab2 = produceFestivo(2013, Calendar.MAY, 9, false);
+		Festivo festivoNoLab3 = produceFestivo(2013, Calendar.MAY, 14, false);
+		Festivo festivoNoLab4 = produceFestivo(2013, Calendar.MAY, 24, false);
+		festivos.add(festivoNoLab1);
+		festivos.add(festivoNoLab2);
+		festivos.add(festivoNoLab3);
+		festivos.add(festivoNoLab4);
+		
+		//Festivos Laborables
+		Festivo festivoLab1 = produceFestivo(2013, Calendar.MAY, 3, true);
+		Festivo festivoLab2 = produceFestivo(2013, Calendar.MAY, 7, true);
+		Festivo festivoLab3 = produceFestivo(2013, Calendar.MAY, 17, true);
+		Festivo festivoLab4 = produceFestivo(2013, Calendar.MAY, 22, true);
+		festivos.add(festivoLab1);
+		festivos.add(festivoLab2);
+		festivos.add(festivoLab3);
+		festivos.add(festivoLab4);
+		
+		//Sábados Festivos No Laborables
+		Festivo sabadoFestivoNoLab = produceFestivo(2013, Calendar.MAY, 11, false);
+		festivos.add(sabadoFestivoNoLab);
+		
+		//Sábados Festivos Laborables
+		Festivo sabadoFestivoLab = produceFestivo(2013, Calendar.MAY, 25, true);
+		festivos.add(sabadoFestivoLab);
+		
+		//Domingos Festivos Laborables
+		Festivo domingoFestivoLab1 = produceFestivo(2013, Calendar.MAY, 12, true);
+		Festivo domingoFestivoLab2 = produceFestivo(2013, Calendar.MAY, 26, true);
+		festivos.add(domingoFestivoLab1);
+		festivos.add(domingoFestivoLab2);
+		
+		ControlFestivo cf = new ControlFestivo();
+		cf.sistema.setEntidades(festivos);
+		
+		Calendar fechaA = Calendar.getInstance();
+		Calendar fechaB = Calendar.getInstance();
+		Calendar fechaC = Calendar.getInstance();
+		Calendar fechaD = Calendar.getInstance();
+		Calendar fechaE = Calendar.getInstance();
+		
+		fechaA.set(Calendar.YEAR, 2013);
+		fechaA.set(Calendar.MONTH, Calendar.MAY);
+		fechaA.set(Calendar.DATE, 1);
+		
+		fechaB.set(Calendar.YEAR, 2013);
+		fechaB.set(Calendar.MONTH, Calendar.MAY);
+		fechaB.set(Calendar.DATE, 10);
+		
+		fechaC.set(Calendar.YEAR, 2013);
+		fechaC.set(Calendar.MONTH, Calendar.MAY);
+		fechaC.set(Calendar.DATE, 22);
+		
+		fechaD.set(Calendar.YEAR, 2013);
+		fechaD.set(Calendar.MONTH, Calendar.MAY);
+		fechaD.set(Calendar.DATE, 30);
+		
+		fechaE.set(Calendar.YEAR, 2013);
+		fechaE.set(Calendar.MONTH, Calendar.MAY);
+		fechaE.set(Calendar.DATE, 11);
+		
+		Date fecha1 = fechaA.getTime();
+		Date fecha2 = fechaB.getTime();
+		Date fecha3 = fechaC.getTime();
+		Date fecha4 = fechaD.getTime();
+		Date fecha5 = fechaE.getTime();
+		
+		Intervalo intervalo1 = new Intervalo(fecha1, fecha3);
+		Intervalo intervalo2 = new Intervalo(fecha2, fecha4);
+		
+		ArrayList<Intervalo> listIntervalos1 = new ArrayList<Intervalo>();
+		listIntervalos1.add(intervalo1);
+		listIntervalos1.add(intervalo2);
+		
+		assertEquals(new Integer(356), cf.contarHoras(listIntervalos1));
+		
+		Intervalo intervalo3 = new Intervalo(fecha2, fecha4);
+		Intervalo intervalo4 = new Intervalo(fecha1, fecha3);
+		
+		ArrayList<Intervalo> listIntervalos2 = new ArrayList<Intervalo>();
+		listIntervalos2.add(intervalo3);
+		listIntervalos2.add(intervalo4);
+		
+		assertEquals(new Integer(356), cf.contarHoras(listIntervalos2));
+		
+		Intervalo intervalo5 = new Intervalo(fecha1, fecha4);
+		Intervalo intervalo6 = new Intervalo(fecha2, fecha3);
+		
+		ArrayList<Intervalo> listIntervalos3 = new ArrayList<Intervalo>();
+		listIntervalos3.add(intervalo5);
+		listIntervalos3.add(intervalo6);
+		
+		assertEquals(new Integer(356), cf.contarHoras(listIntervalos3));
+		
+		Intervalo intervalo7 = new Intervalo(fecha2, fecha3);
+		Intervalo intervalo8 = new Intervalo(fecha1, fecha4);
+		
+		ArrayList<Intervalo> listIntervalos4 = new ArrayList<Intervalo>();
+		listIntervalos4.add(intervalo7);
+		listIntervalos4.add(intervalo8);
+		
+		Intervalo intervalo9 = new Intervalo(fecha1, fecha2);
+		Intervalo intervalo10 = new Intervalo(fecha2, fecha3);
+		
+		ArrayList<Intervalo> listIntervalos5 = new ArrayList<Intervalo>();
+		listIntervalos5.add(intervalo9);
+		listIntervalos5.add(intervalo10);
+		
+		assertEquals(new Integer(184), cf.contarHoras(listIntervalos5));
+		
+		Intervalo intervalo11 = new Intervalo(fecha3, fecha4);
+		Intervalo intervalo12 = new Intervalo(fecha2, fecha3);
+		
+		ArrayList<Intervalo> listIntervalos6 = new ArrayList<Intervalo>();
+		listIntervalos6.add(intervalo11);
+		listIntervalos6.add(intervalo12);
+		
+		assertEquals(new Integer(196), cf.contarHoras(listIntervalos6));
+		
+		Intervalo intervalo13 = new Intervalo(fecha1, fecha2);
+		Intervalo intervalo14 = new Intervalo(fecha5, fecha3);
+		
+		ArrayList<Intervalo> listIntervalos7 = new ArrayList<Intervalo>();
+		listIntervalos7.add(intervalo13);
+		listIntervalos7.add(intervalo14);
+		
+		assertEquals(new Integer(176), cf.contarHoras(listIntervalos7));
+		
+		Intervalo intervalo15 = new Intervalo(fecha5, fecha3);
+		Intervalo intervalo16 = new Intervalo(fecha1, fecha2);
+		
+		ArrayList<Intervalo> listIntervalos8 = new ArrayList<Intervalo>();
+		listIntervalos8.add(intervalo15);
+		listIntervalos8.add(intervalo16);
+		
+		assertEquals(new Integer(176), cf.contarHoras(listIntervalos8));
 		
 	}
 	
