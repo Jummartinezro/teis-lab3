@@ -273,8 +273,73 @@ public class ControlFestivoContarHorasTest extends TestCase {
 	}
 	
 	public void testIntervaloNoValido(){
+		ControlFestivo cf = new ControlFestivo();
+		
+		Calendar fecha1= Calendar.getInstance();
+		fecha1.setTimeInMillis(0);
+		fecha1.set(Calendar.YEAR, 2013);
+		fecha1.set(Calendar.MONTH, Calendar.JANUARY);
+		fecha1.set(Calendar.DATE, 4);
+		Date date1 = fecha1.getTime();
 		
 		
+		Calendar fecha2= Calendar.getInstance();
+		fecha2.setTimeInMillis(0);
+		fecha2.set(Calendar.YEAR, 2013);
+		fecha2.set(Calendar.MONTH, Calendar.JANUARY);
+		fecha2.set(Calendar.DATE, 10);
+		Date date2 = fecha2.getTime();
+		
+		Calendar fecha3= Calendar.getInstance();
+		fecha3.setTimeInMillis(0);
+		fecha3.set(Calendar.YEAR, 2013);
+		fecha3.set(Calendar.MONTH, Calendar.JANUARY);
+		fecha3.set(Calendar.DATE, 15);
+		Date date3 = fecha3.getTime();
+		
+		Calendar fecha4= Calendar.getInstance();
+		fecha4.setTimeInMillis(0);
+		fecha4.set(Calendar.YEAR, 2013);
+		fecha4.set(Calendar.MONTH, Calendar.JANUARY);
+		fecha4.set(Calendar.DATE, 23);
+		Date date4 = fecha4.getTime();
+		
+		//prueba un intervalo valido y el otro invalido
+		ArrayList<Intervalo> intTest1= new ArrayList<Intervalo>();
+		
+		Intervalo valido1 = new Intervalo(date1, date2);
+		intTest1.add(valido1);
+		
+		Intervalo invalido1 = new Intervalo(date4, date3);
+		intTest1.add(invalido1);
+		
+		assertEquals(null,cf.contarHoras(intTest1));
+		
+		//prueba un intervalo valido y el otro invalido, en distinto orden
+		
+		ArrayList<Intervalo> intTest2= new ArrayList<Intervalo>();
+		
+		Intervalo invalido2 = new Intervalo(date2, date1);
+		intTest2.add(invalido2);
+		
+		Intervalo valido2 = new Intervalo(date3, date4);
+		intTest2.add(valido2);
+		
+		assertEquals(null,cf.contarHoras(intTest1));
+		
+		
+		//prueba ambos intervalos invalidos
+		
+		ArrayList<Intervalo> intTest3= new ArrayList<Intervalo>();
+		
+		Intervalo invalido3 = new Intervalo(date2, date1);
+		intTest3.add(invalido2);
+		
+		Intervalo invalido4 = new Intervalo(date4,date3);
+		intTest3.add(valido2);
+		
+		assertEquals(null,cf.contarHoras(intTest1));		
+
 	}
 	
 	public void testIntervalosIguales(){
