@@ -333,10 +333,10 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		ArrayList<Intervalo> intTest3= new ArrayList<Intervalo>();
 		
 		Intervalo invalido3 = new Intervalo(date2, date1);
-		intTest3.add(invalido2);
+		intTest3.add(invalido3);
 		
 		Intervalo invalido4 = new Intervalo(date4,date3);
-		intTest3.add(valido2);
+		intTest3.add(invalido4);
 		
 		assertEquals(null,cf.contarHoras(intTest1));		
 
