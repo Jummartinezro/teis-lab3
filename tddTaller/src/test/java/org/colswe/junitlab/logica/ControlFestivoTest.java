@@ -50,8 +50,8 @@ public class ControlFestivoTest extends TestCase {
 		d2.setTimeInMillis(0);
 		d1.set(Calendar.MONTH, Calendar.JANUARY);
 		d2.set(Calendar.MONTH, Calendar.JANUARY);
-		d1.set(Calendar.DATE, 1);
-		d2.set(Calendar.DATE, 1);
+		d1.set(Calendar.DATE, 20);
+		d2.set(Calendar.DATE, 10);
 		Calendar d3 = Calendar.getInstance();
 		Calendar d4 = Calendar.getInstance();
 		d3.setTimeInMillis(0);
