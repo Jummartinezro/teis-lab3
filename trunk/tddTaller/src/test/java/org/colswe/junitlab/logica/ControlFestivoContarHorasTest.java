@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.colswe.junitlab.logica.imp.ControlFestivo;
 import org.colswe.junitlab.modelo.Festivo;
+import org.colswe.junitlab.modelo.Intervalo;
 
 import junit.framework.TestCase;
 
@@ -276,8 +277,81 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 	}
 	
-	public void testInetrvalosIguales(){
+	public void testIntervalosIguales(){
+
+		List<Festivo> festivos = new ArrayList<Festivo>();
+	
+		//Festivos No Laborables
+		Festivo festivoNoLab1 = produceFestivo(2013, Calendar.APRIL, 2, false);
+		Festivo festivoNoLab2 = produceFestivo(2013, Calendar.APRIL, 3, false);
+		Festivo festivoNoLab3 = produceFestivo(2013, Calendar.APRIL, 29, false);
+		Festivo festivoNoLab4 = produceFestivo(2013, Calendar.APRIL, 30, false);
+		festivos.add(festivoNoLab1);
+		festivos.add(festivoNoLab2);
+		festivos.add(festivoNoLab3);
+		festivos.add(festivoNoLab4);
 		
+		//Festivos Laborables
+		Festivo festivoLab1 = produceFestivo(2013, Calendar.APRIL, 9, true);
+		Festivo festivoLab2 = produceFestivo(2013, Calendar.APRIL, 10, true);
+		Festivo festivoLab3 = produceFestivo(2013, Calendar.APRIL, 16, true);
+		Festivo festivoLab4 = produceFestivo(2013, Calendar.APRIL, 19, true);
+		festivos.add(festivoLab1);
+		festivos.add(festivoLab2);
+		festivos.add(festivoLab3);
+		festivos.add(festivoLab4);
+		
+		//Sábados Festivos No Laborables
+		Festivo sabadoFestivoNoLab = produceFestivo(2013, Calendar.APRIL, 13, false);
+		festivos.add(sabadoFestivoNoLab);
+		
+		//Sábados Festivos Laborables
+		Festivo sabadoFestivoLab = produceFestivo(2013, Calendar.APRIL, 6, true);
+		festivos.add(sabadoFestivoLab);
+		
+		//Domingos Festivos Laborables
+		Festivo domingoFestivoLab1 = produceFestivo(2013, Calendar.APRIL, 7, true);
+		Festivo domingoFestivoLab2 = produceFestivo(2013, Calendar.APRIL, 28, true);
+		festivos.add(domingoFestivoLab1);
+		festivos.add(domingoFestivoLab2);
+		
+		ControlFestivo cf = new ControlFestivo();
+		cf.sistema.setEntidades(festivos);
+		
+		Calendar fechaA = Calendar.getInstance();
+		Calendar fechaB = Calendar.getInstance();
+		Calendar fechaC = Calendar.getInstance();		
+		
+		fechaA.set(Calendar.YEAR, 2013);
+		fechaA.set(Calendar.MONTH, Calendar.APRIL);
+		fechaA.set(Calendar.DATE, 1);
+		
+		fechaB.set(Calendar.YEAR, 2013);
+		fechaB.set(Calendar.MONTH, Calendar.APRIL);
+		fechaB.set(Calendar.DATE, 15);
+		
+		fechaC.set(Calendar.YEAR, 2013);
+		fechaC.set(Calendar.MONTH, Calendar.APRIL);
+		fechaC.set(Calendar.DATE, 30);
+		
+		Date fecha1 = fechaA.getTime();
+		Date fecha2 = fechaB.getTime();
+		Date fecha3 = fechaC.getTime();
+		
+		Intervalo intervalo1 = new Intervalo(fecha1, fecha2);
+		Intervalo intervalo2 = intervalo1;
+		ArrayList<Intervalo> listIntervalos1 = new ArrayList<Intervalo>();
+		listIntervalos1.add(intervalo1);
+		listIntervalos1.add(intervalo2);
+		assertEquals(new Integer(136), cf.contarHoras(listIntervalos1));
+		
+		Intervalo intervalo3 = new Intervalo(fecha2, fecha3);
+		Intervalo intervalo4 = intervalo3;
+		ArrayList<Intervalo> listIntervalos2 = new ArrayList<Intervalo>();
+		listIntervalos2.add(intervalo3);
+		listIntervalos2.add(intervalo4);
+		assertEquals(new Integer(120), cf.contarHoras(listIntervalos2));
+
 	}
 	
 	public void testCruceDeFechas(){
