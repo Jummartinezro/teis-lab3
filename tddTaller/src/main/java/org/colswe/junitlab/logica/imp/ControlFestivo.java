@@ -1,5 +1,6 @@
 package org.colswe.junitlab.logica.imp;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import org.colswe.junitlab.logica.IControlFestivo;
 import org.colswe.junitlab.modelo.Festivo;
 import org.colswe.junitlab.modelo.Sistema;
 import org.colswe.junitlab.modelo.TipoDia;
+import org.colswe.junitlab.modelo.Intervalo;
 
 public class ControlFestivo implements IControlFestivo {
 
@@ -31,6 +33,14 @@ public class ControlFestivo implements IControlFestivo {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public Integer contarHoras(ArrayList<Intervalo> intervalos){
+		// TODO Auto-generated method stub
+		return null;
+		
+	}
+
+
 
 	public boolean fechasValidas(Date desde, Date hasta) {
 		if (desde==null || hasta==null){
