@@ -37,7 +37,7 @@ public class ControlFestivo implements IControlFestivo {
 	 * Cuenta las horas laborales de un conjunto de intervalos de fechas
 	 * @param intervalos intervalos de fechas
 	 * @return numero de horas laborables totales en los intervalos.
-	 * @return null si alguno de los intervalos es null.
+	 * @return null si alguno de los intervalos es invalido
 	 */
 	public Integer contarHoras(ArrayList<Intervalo> intervalos) {
 		Integer totalHoras = Integer.valueOf(0);
