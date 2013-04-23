@@ -35,8 +35,11 @@ public class ControlFestivo implements IControlFestivo {
 	}
 	
 	public Integer contarHoras(ArrayList<Intervalo> intervalos){
-		// TODO Auto-generated method stub
-		return null;
+		Integer totalHoras=Integer.valueOf(0);
+		for(Intervalo i:intervalos){
+			totalHoras+=contarHoras(i.getDesde(), i.getHasta());
+		}
+		return totalHoras;
 		
 	}
 
