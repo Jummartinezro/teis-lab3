@@ -151,15 +151,12 @@ public class ControlFestivo implements IControlFestivo {
 					}
 				}
 			}
-			boolean noFestivoYSabado = !festivo
-					&& c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY;
-			boolean noFestivoYDomingo = !festivo
-					&& c.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY;
-			if (noFestivoYSabado) {
-				sabado++;
-			} else if (noFestivoYDomingo) {
-				normal++;
-			}
+		if (!festivo && c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
+                sabado++;
+        } else if (!festivo
+                        && c.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
+                normal++;
+        }
 			c.add(Calendar.DATE, 1);
 		}
 		ret.clear();

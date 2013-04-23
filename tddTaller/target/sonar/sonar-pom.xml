@@ -42,22 +42,22 @@
     </pluginRepository>
   </pluginRepositories>
   <build>
-    <sourceDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\main\java</sourceDirectory>
-    <scriptSourceDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\main\scripts</scriptSourceDirectory>
-    <testSourceDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\test\java</testSourceDirectory>
-    <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\classes</outputDirectory>
-    <testOutputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\test-classes</testOutputDirectory>
+    <sourceDirectory>D:\workspace\tddTaller\src\main\java</sourceDirectory>
+    <scriptSourceDirectory>D:\workspace\tddTaller\src\main\scripts</scriptSourceDirectory>
+    <testSourceDirectory>D:\workspace\tddTaller\src\test\java</testSourceDirectory>
+    <outputDirectory>D:\workspace\tddTaller\target\classes</outputDirectory>
+    <testOutputDirectory>D:\workspace\tddTaller\target\test-classes</testOutputDirectory>
     <resources>
       <resource>
-        <directory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\main\resources</directory>
+        <directory>D:\workspace\tddTaller\src\main\resources</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\test\resources</directory>
+        <directory>D:\workspace\tddTaller\src\test\resources</directory>
       </testResource>
     </testResources>
-    <directory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target</directory>
+    <directory>D:\workspace\tddTaller\target</directory>
     <finalName>junitlab-0.0.1-SNAPSHOT</finalName>
     <pluginManagement>
       <plugins>
@@ -184,7 +184,7 @@
               <goal>site</goal>
             </goals>
             <configuration>
-              <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
+              <outputDirectory>D:\workspace\tddTaller\target\site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -200,7 +200,7 @@
               <goal>deploy</goal>
             </goals>
             <configuration>
-              <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
+              <outputDirectory>D:\workspace\tddTaller\target\site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -211,7 +211,7 @@
           </execution>
         </executions>
         <configuration>
-          <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
+          <outputDirectory>D:\workspace\tddTaller\target\site</outputDirectory>
           <reportPlugins>
             <reportPlugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -233,13 +233,13 @@
           </execution>
         </executions>
         <configuration>
-          <argLine>-javaagent:C:\Users\andres\AppData\Local\Temp\jacocoagent940156540773638367.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
+          <argLine>-javaagent:C:\Users\ALEXAN~1\AppData\Local\Temp\jacocoagent8625711145334953855.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <reporting>
-    <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
+    <outputDirectory>D:\workspace\tddTaller\target\site</outputDirectory>
   </reporting>
 </project>
