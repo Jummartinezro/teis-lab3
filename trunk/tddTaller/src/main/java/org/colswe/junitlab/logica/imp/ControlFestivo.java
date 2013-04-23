@@ -12,6 +12,10 @@ import org.colswe.junitlab.modelo.Sistema;
 import org.colswe.junitlab.modelo.TipoDia;
 import org.colswe.junitlab.modelo.Intervalo;
 
+/**
+ * @author zergio
+ *
+ */
 public class ControlFestivo implements IControlFestivo {
 
 	private Sistema sistema = Sistema.getInstance();
@@ -20,10 +24,18 @@ public class ControlFestivo implements IControlFestivo {
 	private static final int NUM_HORAS_SABADO=4;
 	
 
+	/**Metodo que retorna la unidad de persistencia
+	 * @return unidad de persistencia sistema
+	 */
 	public Sistema getSistema() {
 		return sistema;
 	}
 
+	/** Metodo que cuenta las horas en un intervalo, incluyendo los días de inicio y terminación 
+	 * @param desde inicio del intervalo
+	 * @param hasta fin del intervalo
+	 * @return suma de las horas laborales en el intervalo ingresado
+	 */
 	public Integer contarHoras(Date desde, Date hasta) {
 		Integer horas = null;
 		if (fechasValidas(desde, hasta)) {
@@ -37,10 +49,15 @@ public class ControlFestivo implements IControlFestivo {
 		return horas;
 	}
 
+	/** Metodo que cuenta las horas en un mapa ingresado (Aún no implementado)
+	 * @param info Mapa de Tipo día e integer (desconocido)
+	 */
 	public Integer contarHoras(Map<TipoDia, Integer> info) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
 	/**
 	 * Cuenta las horas laborales de un conjunto de intervalos de fechas
 	 * @param intervalos intervalos de fechas
@@ -60,9 +77,18 @@ public class ControlFestivo implements IControlFestivo {
 			}
 		}
 		return totalHoras;
-
+		
+		
 	}
 
+	/** Metodo que da información sobre la validez de las fechas,
+	 * que no sean fechas nulas, y que el desde no ocurra antes que el hasta (pueden ser iguales)
+	 * 
+	 * @param desde inicio del intervalo de tiempo (inclusivo)
+	 * @param hasta terminación del intervalo (inclusivo)
+	 * 
+	 * @return 
+	 */
 	public boolean fechasValidas(Date desde, Date hasta) {
 		if (desde == null || hasta == null) {
 			return false;
@@ -71,13 +97,14 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Retorna el mapa con los d�as separados por tipo
+	 * Retorna el mapa con los días separados por tipo
 	 * 
 	 * @param desde
-	 *            d�a inicial inclusive
+	 *            día inicial inclusive
 	 * @param hasta
-	 *            d�a final inclusive
+	 *            día final inclusive
 	 */
+	
 	public Map<TipoDia, Integer> obtenerDias(Date desde, Date hasta) {
 		HashMap<TipoDia, Integer> ret = new HashMap<TipoDia, Integer>();
 		ret.put(TipoDia.FESTIVO_LABORA, 0);
@@ -113,6 +140,7 @@ public class ControlFestivo implements IControlFestivo {
 					}
 				}
 			}
+			
 			if (!festivo && c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
 				sabado++;
 			} else if (!festivo
@@ -129,5 +157,4 @@ public class ControlFestivo implements IControlFestivo {
 
 		return ret;
 	}
-
 }
