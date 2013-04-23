@@ -307,7 +307,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 		//Prueba un intervalo válido y el otro inválido.
 		
-		ArrayList<Intervalo> intTest1= new ArrayList<Intervalo>();
+		ArrayList<Intervalo> intTest1 = new ArrayList<Intervalo>();
 		
 		Intervalo valido1 = new Intervalo(date1, date2);
 		intTest1.add(valido1);
@@ -319,7 +319,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 		//Prueba un intervalo válido y el otro inválido, en distinto orden.
 		
-		ArrayList<Intervalo> intTest2= new ArrayList<Intervalo>();
+		ArrayList<Intervalo> intTest2 = new ArrayList<Intervalo>();
 		
 		Intervalo invalido2 = new Intervalo(date2, date1);
 		intTest2.add(invalido2);
@@ -327,11 +327,11 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		Intervalo valido2 = new Intervalo(date3, date4);
 		intTest2.add(valido2);
 		
-		assertEquals(null,cf.contarHoras(intTest1));
+		assertEquals(null,cf.contarHoras(intTest2));
 		
 		//Prueba ambos intervalos inválidos.
 		
-		ArrayList<Intervalo> intTest3= new ArrayList<Intervalo>();
+		ArrayList<Intervalo> intTest3 = new ArrayList<Intervalo>();
 		
 		Intervalo invalido3 = new Intervalo(date2, date1);
 		intTest3.add(invalido3);
@@ -339,7 +339,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		Intervalo invalido4 = new Intervalo(date4,date3);
 		intTest3.add(invalido4);
 		
-		assertEquals(null,cf.contarHoras(intTest1));		
+		assertEquals(null,cf.contarHoras(intTest3));		
 
 	}
 	
