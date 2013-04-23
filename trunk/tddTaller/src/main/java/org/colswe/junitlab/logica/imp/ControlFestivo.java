@@ -18,7 +18,7 @@ public class ControlFestivo implements IControlFestivo {
 
 	public Integer contarHoras(Date desde, Date hasta) {
 		Integer horas = null;
-		if (fechasValidas(desde, hasta)){
+		if (fechasValidas(desde, hasta)) {
 			horas = new Integer(0);
 			Map<TipoDia, Integer> ret = obtenerDias(desde, hasta);
 			horas += ret.get(TipoDia.FESTIVO_LABORA) * 16;
@@ -33,29 +33,41 @@ public class ControlFestivo implements IControlFestivo {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	public Integer contarHoras(ArrayList<Intervalo> intervalos){
-		Integer totalHoras=Integer.valueOf(0);
-		for(Intervalo i:intervalos){
-			totalHoras+=contarHoras(i.getDesde(), i.getHasta());
+	/**
+	 * Cuenta las horas laborales de un conjunto de intervalos de fechas
+	 * @param intervalos intervalos de fechas
+	 * @return numero de horas laborables totales en los intervalos.
+	 * @return null si alguno de los intervalos es null.
+	 */
+	public Integer contarHoras(ArrayList<Intervalo> intervalos) {
+		Integer totalHoras = Integer.valueOf(0);
+		for (Intervalo i : intervalos) {
+			Date desde = i.getDesde();
+			Date hasta = i.getHasta();
+			if (!fechasValidas(desde, hasta)) {
+				totalHoras=null;
+			} else {
+				totalHoras += contarHoras(i.getDesde(), i.getHasta());
+			}
 		}
 		return totalHoras;
-		
+
 	}
 
-
-
 	public boolean fechasValidas(Date desde, Date hasta) {
-		if (desde==null || hasta==null){
+		if (desde == null || hasta == null) {
 			return false;
 		}
-		return desde.before(hasta) ||  desde.equals(hasta);
+		return desde.before(hasta) || desde.equals(hasta);
 	}
 
 	/**
 	 * Retorna el mapa con los d�as separados por tipo
-	 * @param desde d�a inicial inclusive
-	 * @param hasta d�a final inclusive
+	 * 
+	 * @param desde
+	 *            d�a inicial inclusive
+	 * @param hasta
+	 *            d�a final inclusive
 	 */
 	public Map<TipoDia, Integer> obtenerDias(Date desde, Date hasta) {
 		HashMap<TipoDia, Integer> ret = new HashMap<TipoDia, Integer>();
@@ -64,7 +76,7 @@ public class ControlFestivo implements IControlFestivo {
 		ret.put(TipoDia.NORMAL, 0);
 		ret.put(TipoDia.SABADO, 0);
 
-		if (!fechasValidas(desde, hasta)){
+		if (!fechasValidas(desde, hasta)) {
 			return ret;
 		}
 		Calendar cH = Calendar.getInstance();
@@ -72,28 +84,30 @@ public class ControlFestivo implements IControlFestivo {
 		cH.add(Calendar.DATE, 1);
 		Calendar c = Calendar.getInstance();
 		c.setTimeInMillis(desde.getTime());
-		int sabado=0;
-		int festivoL=0;
-		int festivoNL=0;
-		int normal=0;
+		int sabado = 0;
+		int festivoL = 0;
+		int festivoNL = 0;
+		int normal = 0;
 
-		while (cH.after(c)){
+		while (cH.after(c)) {
 			boolean festivo = false;
-			for (Festivo f : sistema.getEntidades()){
-				if (f.getFecha().equals(c.getTime())){
+			for (Festivo f : sistema.getEntidades()) {
+				if (f.getFecha().equals(c.getTime())) {
 					festivo = true;
-					if (f.isLaborable()){
+					if (f.isLaborable()) {
 						festivoL++;
-					}else{
+					} else {
 						Calendar ct = Calendar.getInstance();
 						ct.setTime(f.getFecha());
-						festivoNL += ct.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ? 0 : 1;
+						festivoNL += ct.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ? 0
+								: 1;
 					}
 				}
 			}
-			if (!festivo && c.get(Calendar.DAY_OF_WEEK)==Calendar.SATURDAY){
+			if (!festivo && c.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
 				sabado++;
-			}else if (!festivo && c.get(Calendar.DAY_OF_WEEK)!=Calendar.SUNDAY){
+			} else if (!festivo
+					&& c.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
 				normal++;
 			}
 			c.add(Calendar.DATE, 1);
