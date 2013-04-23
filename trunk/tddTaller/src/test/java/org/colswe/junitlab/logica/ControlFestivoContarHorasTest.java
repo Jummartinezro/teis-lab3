@@ -24,6 +24,14 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		super(name);
 	}
 	
+	/**
+	 * Test que verifica si alguna de las dos fechas (desde y hasta),
+	 * o ambas, no son válidas.
+	 * @param desdeNull, guarda una fecha desde, tipo null.
+	 * @param hastaNull, guarda una fecha hasta, tipo null.
+	 * @param desde, fecha de inicio en el intervalo a contar horas.
+	 * @param hasta, fecha de terminación en el intervalo a contar horas.
+	 */
 	public void testFechasInvalidas(){
 		ControlFestivo cf = new ControlFestivo();
 		
@@ -45,7 +53,14 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		assertEquals(null, cf.contarHoras(desde.getTime(), hasta.getTime()));
 
 	}
-
+	
+	/** 
+	 * Test que prueba el funcionamiento del método contarHoras
+	 * si las dos fechas son iguales.
+	 * @param festivos, arreglo en donde se almacenan los festivos declarados para la prueba.
+	 * @param desde, fecha de inicio en el intervalo a contar horas.
+	 * @param hasta, fecha de terminación en el intervalo a contar horas.
+	 */
 	public void testFechasIguales() {
 
 		List<Festivo> festivos = new ArrayList<Festivo>();
@@ -136,6 +151,14 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 	}
 	
+	/**
+	 * Test que prueba el funcionamiento del método contarHoras cuando se
+	 * somete a ciertas condiciones que podrían causar el mal funcionamiento
+	 * del procedimiento.
+	 * @param festivos, arreglo en donde se almacenan los festivos declarados para la prueba.
+	 * @param desde, fecha de inicio en el intervalo a contar horas.
+	 * @param hasta, fecha de terminación en el intervalo a contar horas.
+	 */
 	public void testFuncionalidadEsperada() {
 		List<Festivo> festivos = new ArrayList<Festivo>();
 		//Festivos No Laborables
@@ -272,6 +295,9 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		
 	}
 	
+	/** 
+	 * Test que prueba que alguno o los dos intervalos de fechas no son válidos.
+	 */
 	public void testIntervaloNoValido(){
 		
 		ControlFestivo cf = new ControlFestivo();
@@ -343,6 +369,13 @@ public class ControlFestivoContarHorasTest extends TestCase {
 
 	}
 	
+	/**
+	 * Test que prueba el funcionamiento del método contarHoras cuando los dos
+	 * intervalos son iguales. Se prueba con dos intervalos y en cada uno se
+	 * incluyen festivos laborables, no laborables, sábados, sábados festivos
+	 * laborables, domingos festivos laborables y días comunes.
+	 * @param festivos, arreglo en donde se almacenan los festivos declarados para la prueba.
+	 */
 	public void testIntervalosIguales(){
 
 		List<Festivo> festivos = new ArrayList<Festivo>();
@@ -427,6 +460,11 @@ public class ControlFestivoContarHorasTest extends TestCase {
 
 	}
 	
+	/**
+	 * Test que prueba el funcionamiento del método contarHoras cuando se ingresan
+	 * dos intervalos entre los cuales existen fechas comunes.
+	 * @param festivos, arreglo en donde se almacenan los festivos declarados para la prueba.
+	 */
 	public void testCruceDeFechas(){
 
 		List<Festivo> festivos = new ArrayList<Festivo>();
