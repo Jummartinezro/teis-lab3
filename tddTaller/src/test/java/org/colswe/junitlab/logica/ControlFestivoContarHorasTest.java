@@ -385,8 +385,11 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		cf.sistema.setEntidades(festivos);
 		
 		Calendar fechaA = Calendar.getInstance();
+		fechaA.setTimeInMillis(0);
 		Calendar fechaB = Calendar.getInstance();
-		Calendar fechaC = Calendar.getInstance();		
+		fechaB.setTimeInMillis(0);
+		Calendar fechaC = Calendar.getInstance();
+		fechaC.setTimeInMillis(0);
 		
 		fechaA.set(Calendar.YEAR, 2013);
 		fechaA.set(Calendar.MONTH, Calendar.APRIL);
@@ -466,10 +469,15 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		cf.sistema.setEntidades(festivos);
 		
 		Calendar fechaA = Calendar.getInstance();
+		fechaA.setTimeInMillis(0);
 		Calendar fechaB = Calendar.getInstance();
+		fechaB.setTimeInMillis(0);
 		Calendar fechaC = Calendar.getInstance();
+		fechaC.setTimeInMillis(0);
 		Calendar fechaD = Calendar.getInstance();
+		fechaD.setTimeInMillis(0);
 		Calendar fechaE = Calendar.getInstance();
+		fechaE.setTimeInMillis(0);
 		
 		fechaA.set(Calendar.YEAR, 2013);
 		fechaA.set(Calendar.MONTH, Calendar.MAY);
