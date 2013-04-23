@@ -1,12 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: org.colswe.junitlab.logica.ControlFestivoListaTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec <<< FAILURE!
-testObtenerDias(org.colswe.junitlab.logica.ControlFestivoListaTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE!
+testObtenerDias(org.colswe.junitlab.logica.ControlFestivoListaTest)  Time elapsed: 0 sec  <<< FAILURE!
 junit.framework.AssertionFailedError: expected:<19> but was:<4>
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
 	at org.colswe.junitlab.logica.ControlFestivoListaTest.testObtenerDias(ControlFestivoListaTest.java:48)
-

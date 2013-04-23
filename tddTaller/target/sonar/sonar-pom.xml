@@ -24,8 +24,8 @@
         <enabled>false</enabled>
       </snapshots>
       <id>central</id>
-      <name>Maven Repository Switchboard</name>
-      <url>http://repo1.maven.org/maven2</url>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -37,27 +37,27 @@
         <enabled>false</enabled>
       </snapshots>
       <id>central</id>
-      <name>Maven Plugin Repository</name>
-      <url>http://repo1.maven.org/maven2</url>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
     </pluginRepository>
   </pluginRepositories>
   <build>
-    <sourceDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/src/main/java</sourceDirectory>
-    <scriptSourceDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/src/main/scripts</scriptSourceDirectory>
-    <testSourceDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/src/test/java</testSourceDirectory>
-    <outputDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/classes</outputDirectory>
-    <testOutputDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/test-classes</testOutputDirectory>
+    <sourceDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\main\java</sourceDirectory>
+    <scriptSourceDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\main\scripts</scriptSourceDirectory>
+    <testSourceDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\test\java</testSourceDirectory>
+    <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\classes</outputDirectory>
+    <testOutputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\test-classes</testOutputDirectory>
     <resources>
       <resource>
-        <directory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/src/main/resources</directory>
+        <directory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\main\resources</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/src/test/resources</directory>
+        <directory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\src\test\resources</directory>
       </testResource>
     </testResources>
-    <directory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target</directory>
+    <directory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target</directory>
     <finalName>junitlab-0.0.1-SNAPSHOT</finalName>
     <pluginManagement>
       <plugins>
@@ -108,7 +108,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>2.4.3</version>
+        <version>2.5</version>
         <executions>
           <execution>
             <id>default-resources</id>
@@ -149,7 +149,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>2.3.1</version>
+        <version>2.3.2</version>
         <executions>
           <execution>
             <id>default-jar</id>
@@ -162,7 +162,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.5</version>
+        <version>2.7</version>
         <executions>
           <execution>
             <id>default-deploy</id>
@@ -175,7 +175,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
-        <version>2.0.1</version>
+        <version>3.0</version>
         <executions>
           <execution>
             <id>default-site</id>
@@ -184,7 +184,7 @@
               <goal>site</goal>
             </goals>
             <configuration>
-              <outputDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/site</outputDirectory>
+              <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -200,7 +200,7 @@
               <goal>deploy</goal>
             </goals>
             <configuration>
-              <outputDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/site</outputDirectory>
+              <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
               <reportPlugins>
                 <reportPlugin>
                   <groupId>org.apache.maven.plugins</groupId>
@@ -211,7 +211,7 @@
           </execution>
         </executions>
         <configuration>
-          <outputDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/site</outputDirectory>
+          <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
           <reportPlugins>
             <reportPlugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -222,7 +222,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.7.2</version>
+        <version>2.10</version>
         <executions>
           <execution>
             <id>default-test</id>
@@ -233,13 +233,13 @@
           </execution>
         </executions>
         <configuration>
-          <argLine>-javaagent:/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/jacocoagent3843820481263774612.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
+          <argLine>-javaagent:C:\Users\andres\AppData\Local\Temp\jacocoagent940156540773638367.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <reporting>
-    <outputDirectory>/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/site</outputDirectory>
+    <outputDirectory>D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 4 (Sonar)\tddTaller\target\site</outputDirectory>
   </reporting>
 </project>
