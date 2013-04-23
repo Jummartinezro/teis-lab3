@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.001" errors="0" skipped="0" tests="2" name="org.colswe.junitlab.logica.ControlFestivoTest">
+<testsuite failures="0" time="0.002" errors="0" skipped="0" tests="2" name="org.colswe.junitlab.logica.ControlFestivoTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
@@ -22,7 +22,7 @@
     <property name="basedir" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller"/>
     <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefirebooter4296189895498912853.jar:/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/jacocoagent3953868382856610355.jar"/>
+    <property name="surefire.real.class.path" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefirebooter591726694011127175.jar:/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/jacocoagent3843820481263774612.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/"/>
     <property name="line.separator" value="
 "/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
-    <property name="sun.java.command" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefirebooter4296189895498912853.jar /Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefire2585308723942796298tmp /Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefire6090019865493170470tmp"/>
+    <property name="sun.java.command" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefirebooter591726694011127175.jar /Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefire2056494113031277603tmp /Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefire3588702307728755664tmp"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="fr"/>
     <property name="awt.toolkit" value="apple.awt.CToolkit"/>
