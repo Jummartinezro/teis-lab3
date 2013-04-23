@@ -46,8 +46,9 @@ public class ControlFestivo implements IControlFestivo {
 			Date hasta = i.getHasta();
 			if (!fechasValidas(desde, hasta)) {
 				totalHoras=null;
+				break;
 			} else {
-				totalHoras += contarHoras(i.getDesde(), i.getHasta());
+				totalHoras += contarHoras(desde, hasta);
 			}
 		}
 		return totalHoras;
