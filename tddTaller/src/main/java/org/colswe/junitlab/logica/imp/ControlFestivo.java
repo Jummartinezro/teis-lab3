@@ -14,17 +14,25 @@ import org.colswe.junitlab.modelo.Intervalo;
 
 public class ControlFestivo implements IControlFestivo {
 
-	public Sistema sistema = Sistema.getInstance();
+	private Sistema sistema = Sistema.getInstance();
+	private static final int NUM_HORAS_FESTIVO_LABORABLE=16;
+	private static final int NUM_HORAS_DIA_LABORAL=8;
+	private static final int NUM_HORAS_SABADO=4;
+	
+
+	public Sistema getSistema() {
+		return sistema;
+	}
 
 	public Integer contarHoras(Date desde, Date hasta) {
 		Integer horas = null;
 		if (fechasValidas(desde, hasta)) {
 			horas = new Integer(0);
 			Map<TipoDia, Integer> ret = obtenerDias(desde, hasta);
-			horas += ret.get(TipoDia.FESTIVO_LABORA) * 16;
+			horas += ret.get(TipoDia.FESTIVO_LABORA) * NUM_HORAS_FESTIVO_LABORABLE;
 			horas += ret.get(TipoDia.FESTIVO_NO_LABORAL) * 0;
-			horas += ret.get(TipoDia.NORMAL) * 8;
-			horas += ret.get(TipoDia.SABADO) * 4;
+			horas += ret.get(TipoDia.NORMAL) * NUM_HORAS_DIA_LABORAL;
+			horas += ret.get(TipoDia.SABADO) * NUM_HORAS_SABADO;
 		}
 		return horas;
 	}

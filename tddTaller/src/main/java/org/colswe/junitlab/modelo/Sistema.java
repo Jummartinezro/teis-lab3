@@ -3,7 +3,7 @@ package org.colswe.junitlab.modelo;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Sistema {
+public final class Sistema {
 
 	private Collection<Festivo> entidades;
 

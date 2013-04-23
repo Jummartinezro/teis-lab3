@@ -27,7 +27,7 @@ public class ControlFestivoListaTest extends TestCase {
 		festivos.add(festivo2);
 
 		ControlFestivo cf = new ControlFestivo();
-		cf.sistema.setEntidades(festivos);
+		cf.getSistema().setEntidades(festivos);
 
 		Calendar hasta = Calendar.getInstance();
 		Calendar desde = Calendar.getInstance();

@@ -71,7 +71,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		festivos.add(domingoFestivoLab);
 		
 		ControlFestivo cf = new ControlFestivo();
-		cf.sistema.setEntidades(festivos);
+		cf.getSistema().setEntidades(festivos);
 		
 		Calendar desde = Calendar.getInstance();
 		Calendar hasta = Calendar.getInstance();
@@ -179,7 +179,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		festivos.add(festivoDomingoLab2);
 
 		ControlFestivo cf = new ControlFestivo();
-		cf.sistema.setEntidades(festivos);
+		cf.getSistema().setEntidades(festivos);
 
 		Calendar hasta = Calendar.getInstance();
 		Calendar desde = Calendar.getInstance();
@@ -382,7 +382,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		festivos.add(domingoFestivoLab2);
 		
 		ControlFestivo cf = new ControlFestivo();
-		cf.sistema.setEntidades(festivos);
+		cf.getSistema().setEntidades(festivos);
 		
 		Calendar fechaA = Calendar.getInstance();
 		fechaA.setTimeInMillis(0);
@@ -466,7 +466,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		festivos.add(domingoFestivoLab2);
 		
 		ControlFestivo cf = new ControlFestivo();
-		cf.sistema.setEntidades(festivos);
+		cf.getSistema().setEntidades(festivos);
 		
 		Calendar fechaA = Calendar.getInstance();
 		fechaA.setTimeInMillis(0);
