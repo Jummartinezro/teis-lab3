@@ -512,7 +512,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos1.add(intervalo1);
 		listIntervalos1.add(intervalo2);
 		
-		assertEquals(new Integer(356), cf.contarHoras(listIntervalos1));
+		assertEquals(new Integer(332), cf.contarHoras(listIntervalos1));
 		
 		Intervalo intervalo3 = new Intervalo(fecha2, fecha4);
 		Intervalo intervalo4 = new Intervalo(fecha1, fecha3);
@@ -521,7 +521,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos2.add(intervalo3);
 		listIntervalos2.add(intervalo4);
 		
-		assertEquals(new Integer(356), cf.contarHoras(listIntervalos2));
+		assertEquals(new Integer(332), cf.contarHoras(listIntervalos2));
 		
 		Intervalo intervalo5 = new Intervalo(fecha1, fecha4);
 		Intervalo intervalo6 = new Intervalo(fecha2, fecha3);
@@ -530,7 +530,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos3.add(intervalo5);
 		listIntervalos3.add(intervalo6);
 		
-		assertEquals(new Integer(356), cf.contarHoras(listIntervalos3));
+		assertEquals(new Integer(332), cf.contarHoras(listIntervalos3));
 		
 		Intervalo intervalo7 = new Intervalo(fecha2, fecha3);
 		Intervalo intervalo8 = new Intervalo(fecha1, fecha4);
@@ -539,7 +539,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos4.add(intervalo7);
 		listIntervalos4.add(intervalo8);
 		
-		assertEquals(new Integer(356), cf.contarHoras(listIntervalos4));
+		assertEquals(new Integer(332), cf.contarHoras(listIntervalos4));
 		
 		Intervalo intervalo9 = new Intervalo(fecha1, fecha2);
 		Intervalo intervalo10 = new Intervalo(fecha2, fecha3);
@@ -548,7 +548,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos5.add(intervalo9);
 		listIntervalos5.add(intervalo10);
 		
-		assertEquals(new Integer(184), cf.contarHoras(listIntervalos5));
+		assertEquals(new Integer(168), cf.contarHoras(listIntervalos5));
 		
 		Intervalo intervalo11 = new Intervalo(fecha3, fecha4);
 		Intervalo intervalo12 = new Intervalo(fecha2, fecha3);
@@ -557,7 +557,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos6.add(intervalo11);
 		listIntervalos6.add(intervalo12);
 		
-		assertEquals(new Integer(196), cf.contarHoras(listIntervalos6));
+		assertEquals(new Integer(188), cf.contarHoras(listIntervalos6));
 		
 		Intervalo intervalo13 = new Intervalo(fecha1, fecha2);
 		Intervalo intervalo14 = new Intervalo(fecha5, fecha3);
@@ -566,7 +566,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos7.add(intervalo13);
 		listIntervalos7.add(intervalo14);
 		
-		assertEquals(new Integer(176), cf.contarHoras(listIntervalos7));
+		assertEquals(new Integer(160), cf.contarHoras(listIntervalos7));
 		
 		Intervalo intervalo15 = new Intervalo(fecha5, fecha3);
 		Intervalo intervalo16 = new Intervalo(fecha1, fecha2);
@@ -575,7 +575,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		listIntervalos8.add(intervalo15);
 		listIntervalos8.add(intervalo16);
 		
-		assertEquals(new Integer(176), cf.contarHoras(listIntervalos8));
+		assertEquals(new Integer(160), cf.contarHoras(listIntervalos8));
 		
 	}
 	
