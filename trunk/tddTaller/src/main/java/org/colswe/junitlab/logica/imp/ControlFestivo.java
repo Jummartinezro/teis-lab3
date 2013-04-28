@@ -163,7 +163,8 @@ public class ControlFestivo implements IControlFestivo {
 		/*
 		 * Se hace set del iterador c con fecha desde
 		 * Se hace set del limite ch con fecha hasta agregandole un dia
-		 * Se inicializan los contadores del tipo de dia
+		 * Se inicializan los contadores del tipo de dia (sabado, festivo laborable,
+		 * festivo no laborable, dia normal)
 		 */
 		Calendar cH = Calendar.getInstance();
 		cH.setTime(hasta);
@@ -175,8 +176,12 @@ public class ControlFestivo implements IControlFestivo {
 		int festivoNL = 0;
 		int normal = 0;
 		/*
-		 * Se verifica de que tipo de dia es el correspondiente al iterador
-		 * y se incrementa el contador del típo 
+		 * Iterador para contar la cantidad de dias de cada tipo
+		 * Primero se revisa en sistema si la fecha del iterador c es un festivo (ciclo for)
+		 * si la fecha es un festivo se procede a determinar si es laborable o domingo
+		 * si es laborable se suma al contador de festivos laborables
+		 * si no es laborable pero es domingo no se suma a los contadores de festivos
+		 * Si la fecha no es un festivo se procede a determinar si es sabado o dia normal
 		 */
 		while (cH.after(c)) {
 			boolean festivo = false;
