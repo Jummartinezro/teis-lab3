@@ -7,8 +7,13 @@ import java.util.Date;
  *
  */
 public class Festivo {
-
+	/**
+	 * Fecha del día festivo
+	 */
 	private Date fecha;
+	/**
+	 * Indicador de si es festivo laborable
+	 */
 	private boolean laborable;
 
 	/**Obtiene la fecha del festivo
