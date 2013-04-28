@@ -18,9 +18,21 @@ import org.colswe.junitlab.modelo.Intervalo;
  */
 public class ControlFestivo implements IControlFestivo {
 
+	/**
+	 * Instancia de la unidad de presistencia
+	*/
 	private Sistema sistema = Sistema.getInstance();
+	/**
+	 * Número de horas de trabajo de un día festivo laborable
+	 */
 	private static final int NUM_HORAS_FESTIVO_LABORABLE = 16;
+	/**
+	 * Número de horas de trabajo de un día laboral común
+	 */
 	private static final int NUM_HORAS_DIA_LABORAL = 8;
+	/** 
+	 * Número de horas de trabajo de un sábado
+	 */
 	private static final int NUM_HORAS_SABADO = 4;
 
 	/**
@@ -44,6 +56,12 @@ public class ControlFestivo implements IControlFestivo {
 	 */
 	public Integer contarHoras(Date desde, Date hasta) {
 		Integer horas = null;
+		
+		/*
+		 * Se determina si las fechas ingresadas de comienzo y fin del intervalo son correctas
+		 * luego se utiliza el método obtener días para obtener un mapa con las fechas
+		 * finalmente se suman las horas de cada día en el interválo considerando tipo de día
+		*/
 		if (fechasValidas(desde, hasta)) {
 			horas = Integer.valueOf(0);
 			Map<TipoDia, Integer> ret = obtenerDias(desde, hasta);
@@ -77,6 +95,12 @@ public class ControlFestivo implements IControlFestivo {
 	 */
 	public Integer contarHoras(List<Intervalo> intervalos) {
 		Integer totalHoras = Integer.valueOf(0);
+		
+		/*
+		 * Se obtiene la cantidad de horas en cada intervalo usando contarHoras(desde, hasta)
+		 * primero se revisa si las fechas límite del intervalo son válidas
+		 * y si la condición se da se procede a sumar sus horas a un total.
+		 */
 		for (Intervalo i : intervalos) {
 			Date desde = i.getDesde();
 			Date hasta = i.getHasta();
@@ -101,9 +125,14 @@ public class ControlFestivo implements IControlFestivo {
 	 * @param hasta
 	 *            terminación del intervalo (inclusivo)
 	 * 
-	 * @return
+	 * @return true si la desde es una fecha anterior a hasta
 	 */
 	public boolean fechasValidas(Date desde, Date hasta) {
+		/*
+		 * Se comprueba si las fechas no son valores nulos
+		 * Luego se comprueba si las desde está antes de hasta 
+		 */
+		
 		if (desde == null || hasta == null) {
 			return false;
 		}
@@ -111,23 +140,31 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Retorna el mapa con los días separados por tipo
+	 * Método que retorna el mapa con los días separados por tipo
 	 * 
 	 * @param desde
 	 *            día inicial inclusive
 	 * @param hasta
 	 *            día final inclusive
+	 * @return mapa con los días entre las fecha desde y hasta
 	 */
 
 	public Map<TipoDia, Integer> obtenerDias(Date desde, Date hasta) {
+		//Inicialización del mapa a retornar con los tipos de días en cero
 		HashMap<TipoDia, Integer> ret = new HashMap<TipoDia, Integer>();
 		ret.put(TipoDia.FESTIVO_LABORA, 0);
 		ret.put(TipoDia.FESTIVO_NO_LABORAL, 0);
 		ret.put(TipoDia.NORMAL, 0);
 		ret.put(TipoDia.SABADO, 0);
+		//En caso de que desde y hasta sean inválidos se retorna un mapa vacío
 		if (!fechasValidas(desde, hasta)) {
 			return ret;
 		}
+		/*
+		 * Se hace set del iterador c con fecha desde
+		 * Se hace set del limite ch con fecha hasta agregandole un dia
+		 * Se inicializan los contadores del tipo de dia
+		 */
 		Calendar cH = Calendar.getInstance();
 		cH.setTime(hasta);
 		cH.add(Calendar.DATE, 1);
@@ -137,6 +174,10 @@ public class ControlFestivo implements IControlFestivo {
 		int festivoL = 0;
 		int festivoNL = 0;
 		int normal = 0;
+		/*
+		 * Se verifica de que tipo de dia es el correspondiente al iterador
+		 * y se incrementa el contador del típo 
+		 */
 		while (cH.after(c)) {
 			boolean festivo = false;
 			for (Festivo f : sistema.getEntidades()) {
@@ -159,6 +200,8 @@ public class ControlFestivo implements IControlFestivo {
         }
 			c.add(Calendar.DATE, 1);
 		}
+	
+		// Se agrega al mapa cada tipo de día con su respectivo valor de contador
 		ret.clear();
 		ret.put(TipoDia.FESTIVO_LABORA, festivoL);
 		ret.put(TipoDia.FESTIVO_NO_LABORAL, festivoNL);
@@ -166,7 +209,13 @@ public class ControlFestivo implements IControlFestivo {
 		ret.put(TipoDia.SABADO, sabado);
 		return ret;
 	}
-
+	
+	/**
+	 * Método que retorna si un día es domingo
+	 * @param ct
+	 * 			Calendar que tiene la fecha a revisar
+	 * @return true si la fecha es domingo
+	 */
 	private int domingoNoLaborable(Calendar ct) {
 		return ct.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ? 0 : 1;
 	}
