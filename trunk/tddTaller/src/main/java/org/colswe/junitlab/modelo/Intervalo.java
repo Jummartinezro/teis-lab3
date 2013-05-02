@@ -64,3 +64,4 @@ public class Intervalo {
         this.hasta = fechaHasta;
     }
 }
+
