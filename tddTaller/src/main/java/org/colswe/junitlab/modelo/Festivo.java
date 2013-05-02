@@ -3,19 +3,12 @@ package org.colswe.junitlab.modelo;
 import java.util.Date;
 
 /**
- * Clase que modela los días festivos
+ * Clase que modela los días festivos.
  * 
  * @author zergio
- * 
  */
 public class Festivo {
-	/**
-	 * Fecha del día festivo.
-	 */
 	private Date fecha;
-	/**
-	 * Indicador de si es festivo laborable.
-	 */
 	private boolean laborable;
 
 	/**
