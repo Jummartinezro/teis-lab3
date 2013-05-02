@@ -17,10 +17,9 @@ import org.colswe.junitlab.modelo.TipoDia;
  * 
  */
 public class ControlFestivo implements IControlFestivo {
-
 	/**
 	 * Instancia de la unidad de presistencia.
-	*/
+	 */
 	private final Sistema sistema = Sistema.getInstance();
 
 	/**
@@ -79,7 +78,9 @@ public class ControlFestivo implements IControlFestivo {
 	/**
 	 * Metodo que cuenta las horas en un mapa ingresado (Aún no implementado).
 	 * 
-	 * @param info Mapa de Tipo día y un Integer correspondiente segun el numero de dias
+	 * @param info
+	 *            Mapa de Tipo día y un Integer correspondiente segun el numero
+	 *            de dias
 	 * @return suma de las horas laborales en el mapa ingresado
 	 */
 	public Integer contarHoras(final Map<TipoDia, Integer> info) {
@@ -92,8 +93,8 @@ public class ControlFestivo implements IControlFestivo {
 	 * 
 	 * @param intervalos
 	 *            intervalos de fechas
-	 * @return numero de horas laborables totales en los intervalos 
-	 *         o null si alguno de los intervalos es invalido
+	 * @return numero de horas laborables totales en los intervalos o null si
+	 *         alguno de los intervalos es invalido
 	 */
 	public Integer contarHoras(final List<Intervalo> intervalos) {
 		Integer totalHoras = Integer.valueOf(0);
