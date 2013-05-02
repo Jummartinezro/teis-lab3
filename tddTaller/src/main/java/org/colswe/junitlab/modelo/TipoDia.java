@@ -6,7 +6,7 @@ package org.colswe.junitlab.modelo;
  */
 public enum TipoDia {
 	/**
-	 * Enumeracion de los típos de días posibles
+	 * Enumeracion de los típos de días posibles.
 	 * NORMAL corresponde con un día laboral común
 	 * FESTIVO_LABORA corresponde con un festivo laborable
 	 * FESTIVO_NO_LABORAL corresponde con un día festivo no laborable

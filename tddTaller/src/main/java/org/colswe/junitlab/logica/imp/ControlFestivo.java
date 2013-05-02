@@ -19,24 +19,25 @@ import org.colswe.junitlab.modelo.TipoDia;
 public class ControlFestivo implements IControlFestivo {
 
 	/**
-	 * Instancia de la unidad de presistencia
-	 */
+	 * Instancia de la unidad de presistencia.
+	*/
 	private final Sistema sistema = Sistema.getInstance();
+
 	/**
-	 * Número de horas de trabajo de un día festivo laborable
+	 * Número de horas de trabajo de un día festivo laborable.
 	 */
 	private static final int NUM_HORAS_FESTIVO_LABORABLE = 16;
 	/**
-	 * Número de horas de trabajo de un día laboral común
+	 * Número de horas de trabajo de un día laboral común.
 	 */
 	private static final int NUM_HORAS_DIA_LABORAL = 8;
 	/**
-	 * Número de horas de trabajo de un sábado
+	 * Número de horas de trabajo de un sábado.
 	 */
 	private static final int NUM_HORAS_SABADO = 4;
 
 	/**
-	 * Metodo que retorna la unidad de persistencia
+	 * Metodo que retorna la unidad de persistencia.
 	 * 
 	 * @return unidad de persistencia sistema
 	 */
@@ -46,7 +47,7 @@ public class ControlFestivo implements IControlFestivo {
 
 	/**
 	 * Metodo que cuenta las horas en un intervalo, incluyendo los días de
-	 * inicio y terminación
+	 * inicio y terminación.
 	 * 
 	 * @param desde
 	 *            inicio del intervalo
@@ -76,10 +77,10 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Metodo que cuenta las horas en un mapa ingresado (Aún no implementado)
+	 * Metodo que cuenta las horas en un mapa ingresado (Aún no implementado).
 	 * 
-	 * @param info
-	 *            Mapa de Tipo día e integer (desconocido)
+	 * @param info Mapa de Tipo día y un Integer correspondiente segun el numero de dias
+	 * @return suma de las horas laborales en el mapa ingresado
 	 */
 	public Integer contarHoras(final Map<TipoDia, Integer> info) {
 		// TODO Auto-generated method stub
@@ -87,12 +88,12 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Cuenta las horas laborales de un conjunto de intervalos de fechas
+	 * Cuenta las horas laborales de un conjunto de intervalos de fechas.
 	 * 
 	 * @param intervalos
 	 *            intervalos de fechas
-	 * @return numero de horas laborables totales en los intervalos.
-	 * @return null si alguno de los intervalos es invalido
+	 * @return numero de horas laborables totales en los intervalos 
+	 *         o null si alguno de los intervalos es invalido
 	 */
 	public Integer contarHoras(final List<Intervalo> intervalos) {
 		Integer totalHoras = Integer.valueOf(0);
@@ -118,7 +119,7 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Metodo que da información sobre la validez de las fechas, que no sean
+	 * Metodo que da información sobre la validez de las fechas. Que no sean
 	 * fechas nulas, y que el desde no ocurra antes que el hasta (pueden ser
 	 * iguales)
 	 * 
@@ -142,7 +143,7 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Método que retorna el mapa con los días separados por tipo
+	 * Método que retorna el mapa con los días separados por tipo.
 	 * 
 	 * @param desde
 	 *            día inicial inclusive
@@ -220,7 +221,7 @@ public class ControlFestivo implements IControlFestivo {
 	}
 
 	/**
-	 * Método que retorna si un día es domingo
+	 * Método que retorna si un día es domingo.
 	 * 
 	 * @param ct
 	 *            Calendar que tiene la fecha a revisar
