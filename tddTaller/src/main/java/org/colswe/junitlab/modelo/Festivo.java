@@ -10,16 +10,16 @@ import java.util.Date;
  */
 public class Festivo {
 	/**
-	 * Fecha del día festivo
+	 * Fecha del día festivo.
 	 */
 	private Date fecha;
 	/**
-	 * Indicador de si es festivo laborable
+	 * Indicador de si es festivo laborable.
 	 */
 	private boolean laborable;
 
 	/**
-	 * Obtiene la fecha del festivo
+	 * Obtiene la fecha del festivo.
 	 * 
 	 * @return fecha del festivo
 	 */
@@ -28,7 +28,7 @@ public class Festivo {
 	}
 
 	/**
-	 * Asigna una fecha al festivo
+	 * Asigna una fecha al festivo.
 	 * 
 	 * @param laFecha
 	 *            fecha a asignar
@@ -38,7 +38,7 @@ public class Festivo {
 	}
 
 	/**
-	 * Metodo de información sobre un festivo
+	 * Metodo de información sobre un festivo.
 	 * 
 	 * @return retorna información sobre si el festivo es o no laborable
 	 */
@@ -47,7 +47,7 @@ public class Festivo {
 	}
 
 	/**
-	 * Asigna al festivo información de si es o no laboral
+	 * Asigna al festivo información de si es o no laboral.
 	 * 
 	 * @param diaLaborable
 	 *            informacion a asignar
