@@ -9,9 +9,7 @@ import java.util.Date;
  * 
  */
 public class Intervalo {
-	/**
-	 * Fecha de inicio
-	 */
+	/**Fecha de inicio.*/
 	private Date desde;
 	/**
 	 * Fecha final
