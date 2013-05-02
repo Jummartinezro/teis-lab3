@@ -2,9 +2,11 @@ package org.colswe.junitlab.modelo;
 
 import java.util.Date;
 
-/**Modela un intervalo de fechas
+/**
+ * Modela un intervalo de fechas
+ * 
  * @author zergio
- *
+ * 
  */
 public class Intervalo {
 	/**
@@ -15,44 +17,56 @@ public class Intervalo {
 	 * Fecha final
 	 */
 	private Date hasta;
-	
-	/**Constructor de intervalo
-	 * @param date1 fecha de inicio
-	 * @param date2 fecha final
+
+	/**
+	 * Constructor de intervalo
+	 * 
+	 * @param date1
+	 *            fecha de inicio
+	 * @param date2
+	 *            fecha final
 	 */
-	public Intervalo(Date date1, Date date2){
+	public Intervalo(final Date date1, final Date date2) {
 		desde = date1;
 		hasta = date2;
 	}
-	
-	/**Obtiene la fecha de inicio
+
+	/**
+	 * Obtiene la fecha de inicio
+	 * 
 	 * @return fecha de inicio
 	 */
 	public Date getDesde() {
 		return desde;
 	}
-	
-	/**Asigna la fecha de inicio
-	 * @param desde fecha de inicio
+
+	/**
+	 * Asigna la fecha de inicio
+	 * 
+	 * @param desde
+	 *            fecha de inicio
 	 */
-	public void setDesde(Date desde) {
+	public void setDesde(final Date desde) {
 		this.desde = desde;
 	}
-	
-	/**Obtiene la fecha final
+
+	/**
+	 * Obtiene la fecha final
+	 * 
 	 * @return fecha final
 	 */
 	public Date getHasta() {
 		return hasta;
 	}
-	
-	/**Asigna la fecha final
-	 * @param hasta fecha final
+
+	/**
+	 * Asigna la fecha final
+	 * 
+	 * @param hasta
+	 *            fecha final
 	 */
-	public void setHasta(Date hasta) {
+	public void setHasta(final Date hasta) {
 		this.hasta = hasta;
 	}
-	
-	
 
 }

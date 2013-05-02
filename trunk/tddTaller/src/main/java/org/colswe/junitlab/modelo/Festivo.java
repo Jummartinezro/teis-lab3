@@ -2,9 +2,11 @@ package org.colswe.junitlab.modelo;
 
 import java.util.Date;
 
-/**Clase que modela los días festivos
+/**
+ * Clase que modela los días festivos
+ * 
  * @author zergio
- *
+ * 
  */
 public class Festivo {
 	/**
@@ -16,30 +18,41 @@ public class Festivo {
 	 */
 	private boolean laborable;
 
-	/**Obtiene la fecha del festivo
+	/**
+	 * Obtiene la fecha del festivo
+	 * 
 	 * @return fecha del festivo
 	 */
 	public Date getFecha() {
 		return fecha;
 	}
-	/**Asigna una fecha al festivo
-	 * @param fecha fecha a asignar
+
+	/**
+	 * Asigna una fecha al festivo
+	 * 
+	 * @param fecha
+	 *            fecha a asignar
 	 */
-	public void setFecha(Date fecha) {
+	public void setFecha(final Date fecha) {
 		this.fecha = fecha;
 	}
-	
-	
-	/**Metodo de información sobre un festivo
+
+	/**
+	 * Metodo de información sobre un festivo
+	 * 
 	 * @return retorna información sobre si el festivo es o no laborable
 	 */
 	public boolean isLaborable() {
 		return laborable;
 	}
-	/**Asigna al festivo información de si es o no laboral
-	 * @param laborable informacion a asignar
+
+	/**
+	 * Asigna al festivo información de si es o no laboral
+	 * 
+	 * @param laborable
+	 *            informacion a asignar
 	 */
-	public void setLaborable(boolean laborable) {
+	public void setLaborable(final boolean laborable) {
 		this.laborable = laborable;
 	}
 }
