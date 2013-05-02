@@ -63,5 +63,4 @@ public class Intervalo {
     public void setHasta(final Date fechaHasta) {
         this.hasta = fechaHasta;
     }
-
 }
