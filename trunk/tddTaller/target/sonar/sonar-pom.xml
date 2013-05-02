@@ -234,6 +234,7 @@
         </executions>
         <configuration>
           <argLine>-javaagent:/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/jacocoagent1564927116584325250.jar=destfile=target/jacoco.exec,excludes=*_javassist_*</argLine>
+>>>>>>> .r31
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>

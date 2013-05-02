@@ -13,21 +13,21 @@ import org.colswe.junitlab.modelo.TipoDia;
  */
 public interface IControlFestivo {
 
-	/**Cuenta las horas en un intervalo determinado
+	/**Cuenta las horas en un intervalo determinado.
 	 * @param desde comienzo del intervalo
 	 * @param hasta fin del intervalo
 	 * @return horas contadas laborales en este intervalo
 	 */
 	Integer contarHoras(Date desde, Date hasta);
 
-	/**Metodo que valida que las fechas sean correctas
+	/**Metodo que valida que las fechas sean correctas.
 	 * @param desde inicio del intervalo
 	 * @param hasta fin del intervalo
 	 * @return validez (true) o invalidez (false) de las fechas
 	 */
 	boolean fechasValidas(Date desde, Date hasta);
 
-	/**Metodo que obtiene una tabla con los tipos de días encontrados 
+	/**Metodo que obtiene un mapa con los tipos de días encontrados.
 	 * entre dos fechas ingresadas.
 	 * @param desde inicio del intervalo temporal
 	 * @param hasta fin del intervalo temporal
@@ -35,7 +35,7 @@ public interface IControlFestivo {
 	 */
 	Map<TipoDia, Integer> obtenerDias(Date desde, Date hasta);
 
-	/**Metodo que cuenta las horas en una tabla
+	/**Metodo que cuenta las horas en un mapa.
 	 * 
 	 * @param info Mapa con un tipo de dia (Implementados en la clase TipoDia)
 	 * @return suma de horas ingresadas
