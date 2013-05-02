@@ -53,11 +53,11 @@ public final class Sistema {
 	/**
 	 * Asigna una colección de festivos a la coleccion
 	 * 
-	 * @param entidades
+	 * @param lasEntidades
 	 *            festivos a agregar
 	 */
-	public void setEntidades(final Collection<Festivo> entidades) {
-		this.entidades = entidades;
+	public void setEntidades(final Collection<Festivo> lasEntidades) {
+		this.entidades = lasEntidades;
 	}
 
 }
