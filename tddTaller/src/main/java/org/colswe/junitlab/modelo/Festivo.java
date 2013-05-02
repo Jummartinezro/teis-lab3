@@ -30,11 +30,11 @@ public class Festivo {
 	/**
 	 * Asigna una fecha al festivo
 	 * 
-	 * @param fecha
+	 * @param laFecha
 	 *            fecha a asignar
 	 */
-	public void setFecha(final Date fecha) {
-		this.fecha = fecha;
+	public void setFecha(final Date laFecha) {
+		this.fecha = laFecha;
 	}
 
 	/**
@@ -49,10 +49,10 @@ public class Festivo {
 	/**
 	 * Asigna al festivo información de si es o no laboral
 	 * 
-	 * @param laborable
+	 * @param diaLaborable
 	 *            informacion a asignar
 	 */
-	public void setLaborable(final boolean laborable) {
-		this.laborable = laborable;
+	public void setLaborable(final boolean diaLaborable) {
+		this.laborable = diaLaborable;
 	}
 }

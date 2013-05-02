@@ -43,11 +43,11 @@ public class Intervalo {
 	/**
 	 * Asigna la fecha de inicio
 	 * 
-	 * @param desde
+	 * @param fechaDesde
 	 *            fecha de inicio
 	 */
-	public void setDesde(final Date desde) {
-		this.desde = desde;
+	public void setDesde(final Date fechaDesde) {
+		this.desde = fechaDesde;
 	}
 
 	/**
@@ -62,11 +62,11 @@ public class Intervalo {
 	/**
 	 * Asigna la fecha final
 	 * 
-	 * @param hasta
+	 * @param fechaHasta
 	 *            fecha final
 	 */
-	public void setHasta(final Date hasta) {
-		this.hasta = hasta;
+	public void setHasta(final Date fechaHasta) {
+		this.hasta = fechaHasta;
 	}
 
 }
