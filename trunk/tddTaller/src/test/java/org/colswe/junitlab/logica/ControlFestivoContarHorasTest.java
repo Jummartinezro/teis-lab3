@@ -742,6 +742,29 @@ public class ControlFestivoContarHorasTest extends TestCase {
         assertEquals(new Integer(38), cf.contarHoras(fecha1, fecha2));
     }
     
+    public void testViernesDeQuincenaMes29Dias() {
+
+        ControlFestivo cf = new ControlFestivo();
+
+        Calendar fechaA = Calendar.getInstance();
+        fechaA.setTimeInMillis(0);
+        Calendar fechaB = Calendar.getInstance();
+        fechaB.setTimeInMillis(0);
+
+        fechaA.set(Calendar.YEAR, 2012);
+        fechaA.set(Calendar.MONTH, Calendar.FEBRUARY);
+        fechaA.set(Calendar.DATE, 26);
+
+        fechaB.set(Calendar.YEAR, 2012);
+        fechaB.set(Calendar.MONTH, Calendar.MARCH);
+        fechaB.set(Calendar.DATE, 3);
+
+        Date fecha1 = fechaA.getTime();
+        Date fecha2 = fechaB.getTime();
+
+        assertEquals(new Integer(38), cf.contarHoras(fecha1, fecha2));
+    }
+    
     private Festivo produceFestivo(int year, int month, int date, boolean laborable) {
         Festivo festivo = new Festivo();
         Calendar fecha = Calendar.getInstance();
