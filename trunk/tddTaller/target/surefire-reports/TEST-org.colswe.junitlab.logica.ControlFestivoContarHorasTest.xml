@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="5" time="0.062" errors="0" skipped="0" tests="8" name="org.colswe.junitlab.logica.ControlFestivoContarHorasTest">
+<testsuite failures="10" time="0.121" errors="0" skipped="0" tests="13" name="org.colswe.junitlab.logica.ControlFestivoContarHorasTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_15\jre\bin"/>
@@ -62,52 +62,97 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="0.028" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaFestivoNoLaborable">
+  <testcase time="0.086" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaFestivoNoLaborable">
     <failure message="expected:&lt;44&gt; but was:&lt;52&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;44&gt; but was:&lt;52&gt;
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoNoLaborable(ControlFestivoContarHorasTest.java:654)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoNoLaborable(ControlFestivoContarHorasTest.java:657)
 </failure>
   </testcase>
-  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaFestivoLaborable">
+  <testcase time="0.001" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaFestivoLaborable">
     <failure message="expected:&lt;60&gt; but was:&lt;68&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;60&gt; but was:&lt;68&gt;
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoLaborable(ControlFestivoContarHorasTest.java:690)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoLaborable(ControlFestivoContarHorasTest.java:687)
 </failure>
   </testcase>
-  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testCruceDeFechas">
+  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testLimitesDeIntervaloViernesDeQuincena">
+    <failure message="expected:&lt;76&gt; but was:&lt;96&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;76&gt; but was:&lt;96&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testLimitesDeIntervaloViernesDeQuincena(ControlFestivoContarHorasTest.java:717)
+</failure>
+  </testcase>
+  <testcase time="0.002" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaMes28Dias">
+    <failure message="expected:&lt;38&gt; but was:&lt;52&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;38&gt; but was:&lt;52&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes28Dias(ControlFestivoContarHorasTest.java:742)
+</failure>
+  </testcase>
+  <testcase time="0.001" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaMes29Dias">
+    <failure message="expected:&lt;38&gt; but was:&lt;52&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;38&gt; but was:&lt;52&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes29Dias(ControlFestivoContarHorasTest.java:765)
+</failure>
+  </testcase>
+  <testcase time="0.001" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaMes30Dias">
+    <failure message="expected:&lt;38&gt; but was:&lt;60&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;38&gt; but was:&lt;60&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes30Dias(ControlFestivoContarHorasTest.java:788)
+</failure>
+  </testcase>
+  <testcase time="0.001" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaMes31Dias">
+    <failure message="expected:&lt;38&gt; but was:&lt;52&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;38&gt; but was:&lt;52&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes31Dias(ControlFestivoContarHorasTest.java:811)
+</failure>
+  </testcase>
+  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFuncionalidadEsperada"/>
+  <testcase time="0.002" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervaloNoValido"/>
+  <testcase time="0.003" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervalosIguales">
+    <failure message="expected:&lt;234&gt; but was:&lt;256&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;234&gt; but was:&lt;256&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testIntervalosIguales(ControlFestivoContarHorasTest.java:458)
+</failure>
+  </testcase>
+  <testcase time="0.003" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testCruceDeFechas">
     <failure message="expected:&lt;332&gt; but was:&lt;356&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;332&gt; but was:&lt;356&gt;
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testCruceDeFechas(ControlFestivoContarHorasTest.java:554)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testCruceDeFechas(ControlFestivoContarHorasTest.java:563)
 </failure>
   </testcase>
   <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasInvalidas"/>
-  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasIguales">
+  <testcase time="0.003" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasIguales">
     <failure message="expected:&lt;0&gt; but was:&lt;8&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;8&gt;
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testFechasIguales(ControlFestivoContarHorasTest.java:130)
-</failure>
-  </testcase>
-  <testcase time="0.006" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFuncionalidadEsperada"/>
-  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervaloNoValido"/>
-  <testcase time="0.003" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervalosIguales">
-    <failure message="expected:&lt;240&gt; but was:&lt;256&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;240&gt; but was:&lt;256&gt;
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.failNotEquals(Assert.java:282)
-	at junit.framework.Assert.assertEquals(Assert.java:64)
-	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testIntervalosIguales(ControlFestivoContarHorasTest.java:451)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testFechasIguales(ControlFestivoContarHorasTest.java:133)
 </failure>
   </testcase>
 </testsuite>
