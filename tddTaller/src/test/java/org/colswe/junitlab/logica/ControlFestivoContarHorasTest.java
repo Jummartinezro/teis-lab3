@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import static junit.framework.Assert.assertEquals;
 
 import org.colswe.junitlab.logica.imp.ControlFestivo;
 import org.colswe.junitlab.modelo.Festivo;
@@ -653,6 +654,42 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		assertEquals(new Integer(44), cf.contarHoras(listIntervalos));
 	}
 	
+        public void testViernesDeQuincenaFestivoLaborable(){
+		
+		List<Festivo> festivos = new ArrayList<Festivo>();
+		
+		//Festivo Laborable
+		Festivo festivoLab = produceFestivo(2013, Calendar.JUNE, 28, true);
+		festivos.add(festivoLab);
+				
+                ControlFestivo cf = new ControlFestivo();
+		cf.getSistema().setEntidades(festivos);
+		
+		
+		Calendar fechaA = Calendar.getInstance();
+		fechaA.setTimeInMillis(0);
+		Calendar fechaB = Calendar.getInstance();
+		fechaB.setTimeInMillis(0);
+		
+		fechaA.set(Calendar.YEAR, 2013);
+		fechaA.set(Calendar.MONTH, Calendar.JUNE);
+		fechaA.set(Calendar.DATE, 26);
+		
+		fechaB.set(Calendar.YEAR, 2013);
+		fechaB.set(Calendar.MONTH, Calendar.JULY);
+		fechaB.set(Calendar.DATE, 3);
+		
+		Date fecha1 = fechaA.getTime();
+		Date fecha2 = fechaB.getTime();
+		
+		Intervalo intervalo = new Intervalo(fecha1, fecha2);
+		
+		ArrayList<Intervalo> listIntervalos = new ArrayList<Intervalo>();
+		listIntervalos.add(intervalo);
+		
+		assertEquals(new Integer(60), cf.contarHoras(listIntervalos));
+	}
+        
 	private Festivo produceFestivo(int year, int month, int date, boolean laborable) {
 		Festivo festivo = new Festivo();
 		Calendar fecha = Calendar.getInstance();
