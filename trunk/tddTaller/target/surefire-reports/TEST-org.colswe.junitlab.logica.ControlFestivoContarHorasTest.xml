@@ -1,81 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.071" errors="0" skipped="0" tests="6" name="org.colswe.junitlab.logica.ControlFestivoContarHorasTest">
->>>>>>> .r31
+<testsuite failures="4" time="0.087" errors="0" skipped="0" tests="7" name="org.colswe.junitlab.logica.ControlFestivoContarHorasTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
-    <property name="java.vm.version" value="20.45-b01-451"/>
-    <property name="awt.nativeDoubleBuffering" value="true"/>
-    <property name="gopherProxySet" value="false"/>
-    <property name="mrj.build" value="11M4406"/>
-    <property name="java.vm.vendor" value="Apple Inc."/>
-    <property name="java.vendor.url" value="http://www.apple.com/"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_15\jre\bin"/>
+    <property name="java.vm.version" value="23.7-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="ES"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="test" value="org.colswe.junitlab.logica.ControlFestivoContarHorasTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller"/>
-    <property name="java.runtime.version" value="1.6.0_45-b06-451-11M4406"/>
-    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
-    <property name="basedir" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller"/>
-    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
-    <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefirebooter8653499948194609452.jar:/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/jacocoagent1564927116584325250.jar"/>
-    <property name="java.io.tmpdir" value="/var/folders/8f/yyl7fqpd27l_69x9s84hpvk00000gn/T/"/>
+    <property name="user.dir" value="D:\Universidad Nacional de Colombia\Ingeniería de Sistemas y Computación\VIII\Temas Especiales de Ingeniería de Software II\Laboratorios\Lab 6 (Jira)\tddTaller"/>
+    <property name="java.runtime.version" value="1.7.0_15-b03"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_15\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\andres\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
-    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="sun.jnu.encoding" value="MacRoman"/>
-    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="surefire.test.class.path" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/test-classes:/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/classes:/Users/juanmanuelmartinezromero/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 7.3\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_15\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\sybase\DataAccess\ODBC\dll;C:\sybase\RPL-15_0\bin;C:\sybase\UAF-2_0\bin;C:\sybase\OCS-15_0\lib3p;C:\sybase\OCS-15_0\dll;C:\sybase\OCS-15_0\bin;C:\sybase\ASE-15_0\dll;C:\sybase\ASE-15_0\bin;C:\Program Files\CollabNet\Subversion Client;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files\PC Connectivity Solution\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files\Windows Live\Shared;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Calibre2\;C:\Program Files\Mercurial\;C:\Program Files\MATLAB\R2011a\runtime\win32;C:\Program Files\MATLAB\R2011a\bin;C:\sybase\DBISQL\bin;C:\Program Files\NetBeans 7.3\java\maven/bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="50.0"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.7.5"/>
-    <property name="user.home" value="/Users/juanmanuelmartinezromero"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\andres"/>
     <property name="user.timezone" value="America/Bogota"/>
-    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
-    <property name="java.specification.version" value="1.6"/>
-    <property name="file.encoding" value="MacRoman"/>
-    <property name="user.name" value="juanmanuelmartinezromero"/>
-    <property name="java.class.path" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/test-classes:/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/classes:/Users/juanmanuelmartinezromero/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:"/>
-    <property name="java.vm.specification.version" value="1.0"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
-    <property name="sun.java.command" value="/Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefirebooter8653499948194609452.jar /Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefire5419655285904416795tmp /Users/juanmanuelmartinezromero/Documents/Eclipse/Workspace/tddTaller/target/surefire/surefire7303449718907619193tmp"/>
-    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.net.useSystemProxies" value="true"/>
+    <property name="user.name" value="andres"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 7.3\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_15\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=org.colswe.junitlab.logica.ControlFestivoContarHorasTest -Djava.net.useSystemProxies=true test-compile surefire:test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
-    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.6.0_45"/>
-    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
-    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
-    <property name="java.vendor" value="Apple Inc."/>
-    <property name="localRepository" value="/Users/juanmanuelmartinezromero/.m2/repository"/>
-    <property name="file.separator" value="/"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.7.0_15"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_15\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_15\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_15\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_15\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_15\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_15\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_15\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_15\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_15\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 7.3\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="mrj.version" value="1070.1.6.0_45-451"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-<<<<<<< .mine
-  <testcase time="0.028" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervaloNoValido"/>
-  <testcase time="0.002" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervalosIguales"/>
-  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFuncionalidadEsperada"/>
-  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasInvalidas"/>
-  <testcase time="0.001" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasIguales"/>
-  <testcase time="0.014" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testCruceDeFechas"/>
-=======
-  <testcase time="0.016" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasInvalidas"/>
-  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasIguales"/>
-  <testcase time="0.003" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFuncionalidadEsperada"/>
-  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervaloNoValido"/>
-  <testcase time="0.004" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervalosIguales"/>
-  <testcase time="0.013" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testCruceDeFechas"/>
->>>>>>> .r31
+  <testcase time="0.036" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testViernesDeQuincenaFestivoNoLaborable">
+    <failure message="expected:&lt;44&gt; but was:&lt;52&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;44&gt; but was:&lt;52&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoNoLaborable(ControlFestivoContarHorasTest.java:653)
+</failure>
+  </testcase>
+  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testCruceDeFechas">
+    <failure message="expected:&lt;332&gt; but was:&lt;356&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;332&gt; but was:&lt;356&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testCruceDeFechas(ControlFestivoContarHorasTest.java:553)
+</failure>
+  </testcase>
+  <testcase time="0.001" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasInvalidas"/>
+  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFechasIguales">
+    <failure message="expected:&lt;0&gt; but was:&lt;8&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;8&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testFechasIguales(ControlFestivoContarHorasTest.java:129)
+</failure>
+  </testcase>
+  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testFuncionalidadEsperada"/>
+  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervaloNoValido"/>
+  <testcase time="0" classname="org.colswe.junitlab.logica.ControlFestivoContarHorasTest" name="testIntervalosIguales">
+    <failure message="expected:&lt;240&gt; but was:&lt;256&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;240&gt; but was:&lt;256&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testIntervalosIguales(ControlFestivoContarHorasTest.java:450)
+</failure>
+  </testcase>
 </testsuite>

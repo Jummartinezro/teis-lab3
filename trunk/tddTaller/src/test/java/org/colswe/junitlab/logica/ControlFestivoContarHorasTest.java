@@ -616,6 +616,42 @@ public class ControlFestivoContarHorasTest extends TestCase {
 		assertEquals(new Integer(160), cf.contarHoras(listIntervalos8));
 		
 	}
+        
+        public void testViernesDeQuincenaFestivoNoLaborable(){
+		
+		List<Festivo> festivos = new ArrayList<Festivo>();
+		
+		//Festivo No Laborable
+		Festivo festivoNoLab = produceFestivo(2013, Calendar.JUNE, 14, false);
+		festivos.add(festivoNoLab);
+				
+                ControlFestivo cf = new ControlFestivo();
+		cf.getSistema().setEntidades(festivos);
+		
+		
+		Calendar fechaA = Calendar.getInstance();
+		fechaA.setTimeInMillis(0);
+		Calendar fechaB = Calendar.getInstance();
+		fechaB.setTimeInMillis(0);
+		
+		fechaA.set(Calendar.YEAR, 2013);
+		fechaA.set(Calendar.MONTH, Calendar.JUNE);
+		fechaA.set(Calendar.DATE, 10);
+		
+		fechaB.set(Calendar.YEAR, 2013);
+		fechaB.set(Calendar.MONTH, Calendar.JUNE);
+		fechaB.set(Calendar.DATE, 17);
+		
+		Date fecha1 = fechaA.getTime();
+		Date fecha2 = fechaB.getTime();
+		
+		Intervalo intervalo = new Intervalo(fecha1, fecha2);
+		
+		ArrayList<Intervalo> listIntervalos = new ArrayList<Intervalo>();
+		listIntervalos.add(intervalo);
+		
+		assertEquals(new Integer(44), cf.contarHoras(listIntervalos));
+	}
 	
 	private Festivo produceFestivo(int year, int month, int date, boolean laborable) {
 		Festivo festivo = new Festivo();
