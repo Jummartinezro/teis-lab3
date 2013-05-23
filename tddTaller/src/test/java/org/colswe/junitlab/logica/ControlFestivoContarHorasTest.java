@@ -455,7 +455,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
         listIntervalos1.add(intervalo1);
         listIntervalos1.add(intervalo2);
 
-        assertEquals(new Integer(240), cf.contarHoras(listIntervalos1));
+        assertEquals(new Integer(234), cf.contarHoras(listIntervalos1));
 
         Intervalo intervalo3 = new Intervalo(fecha2, fecha3);
         Intervalo intervalo4 = intervalo3;

@@ -1,39 +1,74 @@
 -------------------------------------------------------------------------------
 Test set: org.colswe.junitlab.logica.ControlFestivoContarHorasTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec <<< FAILURE!
-testViernesDeQuincenaFestivoNoLaborable(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.028 sec  <<< FAILURE!
+Tests run: 13, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec <<< FAILURE!
+testViernesDeQuincenaFestivoNoLaborable(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.085 sec  <<< FAILURE!
 junit.framework.AssertionFailedError: expected:<44> but was:<52>
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoNoLaborable(ControlFestivoContarHorasTest.java:654)
-testViernesDeQuincenaFestivoLaborable(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0 sec  <<< FAILURE!
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoNoLaborable(ControlFestivoContarHorasTest.java:657)
+testViernesDeQuincenaFestivoLaborable(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.001 sec  <<< FAILURE!
 junit.framework.AssertionFailedError: expected:<60> but was:<68>
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoLaborable(ControlFestivoContarHorasTest.java:690)
-testCruceDeFechas(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaFestivoLaborable(ControlFestivoContarHorasTest.java:687)
+testLimitesDeIntervaloViernesDeQuincena(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<76> but was:<96>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testLimitesDeIntervaloViernesDeQuincena(ControlFestivoContarHorasTest.java:717)
+testViernesDeQuincenaMes28Dias(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<38> but was:<52>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes28Dias(ControlFestivoContarHorasTest.java:742)
+testViernesDeQuincenaMes29Dias(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<38> but was:<52>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes29Dias(ControlFestivoContarHorasTest.java:765)
+testViernesDeQuincenaMes30Dias(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<38> but was:<60>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes30Dias(ControlFestivoContarHorasTest.java:788)
+testViernesDeQuincenaMes31Dias(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<38> but was:<52>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testViernesDeQuincenaMes31Dias(ControlFestivoContarHorasTest.java:811)
+testIntervalosIguales(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<234> but was:<256>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testIntervalosIguales(ControlFestivoContarHorasTest.java:458)
+testCruceDeFechas(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.003 sec  <<< FAILURE!
 junit.framework.AssertionFailedError: expected:<332> but was:<356>
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testCruceDeFechas(ControlFestivoContarHorasTest.java:554)
-testFechasIguales(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testCruceDeFechas(ControlFestivoContarHorasTest.java:563)
+testFechasIguales(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.002 sec  <<< FAILURE!
 junit.framework.AssertionFailedError: expected:<0> but was:<8>
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.failNotEquals(Assert.java:282)
 	at junit.framework.Assert.assertEquals(Assert.java:64)
 	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testFechasIguales(ControlFestivoContarHorasTest.java:130)
-testIntervalosIguales(org.colswe.junitlab.logica.ControlFestivoContarHorasTest)  Time elapsed: 0.003 sec  <<< FAILURE!
-junit.framework.AssertionFailedError: expected:<240> but was:<256>
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.failNotEquals(Assert.java:282)
-	at junit.framework.Assert.assertEquals(Assert.java:64)
-	at junit.framework.Assert.assertEquals(Assert.java:71)
-	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testIntervalosIguales(ControlFestivoContarHorasTest.java:451)
+	at org.colswe.junitlab.logica.ControlFestivoContarHorasTest.testFechasIguales(ControlFestivoContarHorasTest.java:133)
