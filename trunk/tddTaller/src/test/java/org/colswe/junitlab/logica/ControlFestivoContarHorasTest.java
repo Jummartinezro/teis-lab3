@@ -7,13 +7,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import static junit.framework.Assert.assertEquals;
+
+import junit.framework.TestCase;
 
 import org.colswe.junitlab.logica.imp.ControlFestivo;
 import org.colswe.junitlab.modelo.Festivo;
 import org.colswe.junitlab.modelo.Intervalo;
-
-import junit.framework.TestCase;
 
 /**
  * @author juanmanuelmartinezromero
@@ -270,7 +269,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
         hasta.set(Calendar.YEAR, 2013);
         hasta.set(Calendar.MONTH, Calendar.APRIL);
         hasta.set(Calendar.DATE, 15);
-        assertEquals(new Integer(32), cf.contarHoras(desde.getTime(), hasta.getTime()));
+        assertEquals(new Integer(26), cf.contarHoras(desde.getTime(), hasta.getTime()));
 
         //Rango con solo fechas festivas laborables
         desde.set(Calendar.YEAR, 2013);
@@ -455,7 +454,7 @@ public class ControlFestivoContarHorasTest extends TestCase {
         listIntervalos1.add(intervalo1);
         listIntervalos1.add(intervalo2);
 
-        assertEquals(new Integer(234), cf.contarHoras(listIntervalos1));
+        assertEquals(new Integer(228), cf.contarHoras(listIntervalos1));
 
         Intervalo intervalo3 = new Intervalo(fecha2, fecha3);
         Intervalo intervalo4 = intervalo3;
@@ -714,9 +713,10 @@ public class ControlFestivoContarHorasTest extends TestCase {
         Date fecha2 = fechaB.getTime();
         Date fecha3 = fechaC.getTime();
 
-        assertEquals(new Integer(76), cf.contarHoras(fecha1, fecha2));
+        assertEquals(new Integer(74), cf.contarHoras(fecha1, fecha2));
         assertEquals(new Integer(18), cf.contarHoras(fecha2, fecha3));
-        assertEquals(new Integer(86), cf.contarHoras(fecha1, fecha3));
+        assertEquals(new Integer(84), cf.contarHoras(fecha1, fecha3));
+        
     }
     
     public void testViernesDeQuincenaMes28Dias() {
